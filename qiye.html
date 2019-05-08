@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>企业认证</title>
+		<link rel="stylesheet" href="layui/css/layui.css">
+	</head>
+	<body>
+		<ul class="layui-nav layui-bg-blue">
+			<li class="layui-nav-item">
+    			<a href="layui/images/face/0.gif"></a>
+			</li>
+			<li class="layui-nav-item">
+    			<a href="">账户设置</a>
+    			<dl class="layui-nav-child">
+      				<dd><a href="javascript:;">更改资料</a></dd>
+      				<dd><a href="javascript:;">安全管理</a></dd>
+      				<dd><a href="javascript:;">退出</a></dd>
+    			</dl>
+			</li>
+			<li class="layui-nav-item" >
+    			<a href="javascript:;">员工招聘</a>
+    			<dl class="layui-nav-child">
+      				<dd><a href="">招聘</a></dd>
+      				<dd><a href="">招聘</a></dd>
+      				<dd><a href="">招聘</a></dd>
+    			</dl>
+			</li>
+			<li class="layui-nav-item">
+    			<a href="">订单中心</a>
+			</li>
+			<li class="layui-nav-item" >
+    			<a href="">发票管理</a>
+    			<dl class="layui-nav-child">
+      				<dd><a href="javascript:;">招聘</a></dd>
+      				<dd><a href="javascript:;">招聘</a></dd>
+      				<dd><a href="javascript:;">招聘</a></dd>
+    			</dl>
+			</li>
+			<li class="layui-nav-item" style="margin-left:70%;"><a href="">退出</a></li>
+		</ul>
+	
+		<div class="layui-container" style="margin-top: 30px;">
+			<blockquote class="layui-elem-quote layui-text">
+  			企业认证
+			</blockquote>
+			<div class="layui-row">
+                <div class="layui-col-md6">
+                    <form class="layui-form" action="">
+  						<div class="layui-form-item">
+    						<label class="layui-form-label"><span style="color: red;">*</span>&nbsp;公司名称</label>
+    						<div class="layui-input-block" style="position:relative;">
+      							<input name="title" class="layui-input" type="text" placeholder="请输入公司名称全称" autocomplete="off" required lay-verify="required" >
+      							<i class="layui-icon layui-icon-close-fill" style="font-size: 20px; color: darkgray; position: absolute;right: 5%;top:20%"></i>
+      						</div>
+  						</div>
+			 			<div class="layui-form-item">
+			    			<label class="layui-form-label" ><span style="color: red;">*</span>&nbsp;统一社会信用代码</label>
+			    			<div class="layui-input-block" >
+			        			<input name="id" class="layui-input" type="text" placeholder="请输入统一社会信用代码" autocomplete="off"  required lay-verify="required" >
+						    </div>
+			    		</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label"><span style="color: red;">*</span>&nbsp;省份</label>
+							<div class="layui-input-block">
+							<select name="province" required lay-verify="sheng">
+								<option value="">省</option>
+								<option value="1" >河南</option>
+								<option value="2">湖北</option>
+								<option value="3">湖北</option>								
+							</select>
+						   </div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label"><span style="color: red;">*</span>&nbsp;城市</label>
+							<div class="layui-input-block">
+								<select name="province" placeholder="省" lay-verify="city">
+									<option value="">省</option>
+									<option value="1">河南</option>
+									<option value="2">湖北</option>
+									<option value="3">湖北</option>								
+								</select>
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label"><span style="color: red;">*</span>&nbsp;县区</label>
+							<div class="layui-input-block">
+								<select name="province" placeholder="省" lay-verify="xian">
+									<option value="">省</option>
+									<option value="1">河南</option>
+									<option value="2">湖北</option>
+									<option value="3">湖北</option>								
+								</select>
+							</div>
+						</div>
+						<div class="layui-form-item">
+			    			<label class="layui-form-label">注册地</label>
+			    			<div class="layui-input-block">
+			        			<input name="didian" class="layui-input" type="text" placeholder="请输入详细地址" autocomplete="off" >
+			        		</div>
+						</div>
+						<div class="layui-form-item">
+			    			<label class="layui-form-label">规模</label>
+			    			<div class="layui-input-block">
+			        		    <input name="guimo" class="layui-input" type="text" placeholder="请输入公司规模" autocomplete="off" >
+			        		</div>
+						</div>
+						<div class="layui-form-item">
+			    			<label class="layui-form-label"><span style="color: red;">*</span>&nbsp;法人身份证正面照片</label>
+			    			<div class="layui-input-block">
+			        		    <button type="button" class="layui-btn layui-btn-normal" id="test1">上传照片</button>
+			        		</div>
+						</div>
+						<div class="layui-form-item">
+			    			<label class="layui-form-label"><span style="color: red;">*</span>&nbsp;法人身份证反面照片</label>
+			    			<div class="layui-input-block">
+			    				<img src="layui/images/face/1.gif">
+			        			<button type="button" class="layui-btn layui-btn-primary" id="test2">重新上传</button>
+			        	    </div>
+						</div>
+						<div class="layui-form-item">
+			    			<label class="layui-form-label"><span style="color: red;">*</span>&nbsp;营业执照</label>
+			    			<div class="layui-input-block">
+			        			<button type="button" class="layui-btn layui-btn-normal" id="test3">上传照片</button>
+			        	    </div>
+						</div>
+					</form>
+ 			    </div>
+ 			    
+   			    <div class="layui-col-md6 layui-col-space3">
+    				<form class="layui-form" action="">
+  						<div class="layui-form-item">
+    						<label class="layui-form-label">公司简称</label>
+    						<div class="layui-input-block" style="position:relative;">
+								  <input name="title" class="layui-input" type="text" placeholder="请输入公司名称简称" autocomplete="off" >
+								  <i class="layui-icon layui-icon-close-fill" style="font-size: 20px; color: darkgray; position: absolute;right: 5%;top:20%"></i>
+      						</div>
+  						</div>
+			 			<div class="layui-form-item">
+			    			<label class="layui-form-label">邮箱</label>
+			    			<div class="layui-input-block">
+			        			<input name="email" class="layui-input" type="text" placeholder="请输入公司电子邮箱" autocomplete="off" >
+						    </div>
+			    		</div>
+						<div class="layui-form-item">
+			    			<label class="layui-form-label"><span style="color: red;">*</span>&nbsp;法人姓名</label>
+			    			<div class="layui-input-block">
+			        			<input name="fname" class="layui-input" type="text" placeholder="请输入公司法人姓名" autocomplete="off" required lay-verify="required">
+						    </div>
+			    		</div>
+			    		<div class="layui-form-item">
+			    			<label class="layui-form-label"><span style="color: red;">*</span>&nbsp;法人身份证号码</label>
+			    			<div class="layui-input-block">
+			        			<input name="number" class="layui-input" type="text" placeholder="请输入公司法人身份证号码" autocomplete="off" required lay-verify="required">
+						    </div>
+			    		</div>
+			    		<div class="layui-form-item">
+			    			<label class="layui-form-label"><span style="color: red;">*</span>&nbsp;联系人姓名</label>
+			    			<div class="layui-input-block">
+			        			<input name="username" class="layui-input" type="text" placeholder="请输入联系人姓名" autocomplete="off" required lay-verify="required|username">
+						    </div>
+			    		</div>
+						<div class="layui-form-item">
+			    			<label class="layui-form-label"><span style="color: red;">*</span>&nbsp;联系人电话</label>
+			    			<div class="layui-input-block">
+			        			<input name="phone" class="layui-input" type="text" placeholder="请输入联系人电话" autocomplete="off"  lay-verify="required|phone">
+			        		</div>
+						</div>
+						<div class="layui-form-item">
+			    			<label class="layui-form-label">传真</label>
+			    			<div class="layui-input-block">
+			        		    <input name="fax" class="layui-input" type="text" placeholder="请输入公司传真号码" autocomplete="off" lay-verify="fax">
+			        		</div>
+						</div>
+						<div class="layui-form-item">
+			    			<label class="layui-form-label"><span style="color: red;">*</span>&nbsp;联系人授权书下载</label>
+			    			<div class="layui-input-block">
+			        		    <button type="button" class="layui-btn layui-btn-primary" id="test1" required>下载模板</button>
+			        		</div>
+						</div>
+						<div class="layui-form-item">
+			    			<label class="layui-form-label"><span style="color: red;">*</span>&nbsp;上传授权书</label>
+			    			<div class="layui-input-block">
+			        			<button type="button" class="layui-btn layui-btn-normal " id="test4" required>上传照片</button>
+			        	    </div>
+						</div>
+					</form>
+   				</div>
+			   </div>
+			<div>
+				<form class="layui-form" action="" >
+					<div class="layui-form-item">
+						<div class="layui-input-block">
+					 		<button  class="layui-btn  layui-btn-lg " style="background-color:#5FB878;margin-left:20em">保存</button>
+							<button class="layui-btn  layui-btn-lg" lay-submit lay-filter="go" style="background-color:blue;">提交</button>	
+						</div>
+					</div>		
+				</form>
+			</div>
+		</div>
+		<div class="layui-footer layui-bg-blue" style="margin-top: 30px; height: 30px; ">
+			<div class="layui-row" style="line-height:28px;">
+    			<div class="layui-col-md4">
+      				<div class="grid-demo grid-demo-bg1">技术支持：冀联人力资源管理系统  客服电话：0311-966888</div>
+    			</div>
+    			<div class="layui-col-md4 layui-col-md-offset1">
+      				<div class="grid-demo">Copyright © 2013-2019年 By 冀联人力资源管理系统</div>
+				</div>
+			</div>	
+		</div>
+
+		<script src="layui/layui.js"></script>
+		<script>
+			//上传文件
+			layui.use('upload',function(){
+				var upload = layui.upload;
+				var uploadInst = upload.render({
+					elem:'#test1'
+					,url:''
+					,done:function (res) {
+						
+					}
+					,error:function(){
+
+					}
+				});
+			});
+			layui.use('upload',function(){
+				var upload = layui.upload;
+				var uploadInst = upload.render({
+					elem:'#test2'
+					,url:''
+					,done:function (res) {
+						
+					}
+					,error:function(){
+
+					}
+				});
+			});
+			layui.use('upload',function(){
+				var upload = layui.upload;
+				var uploadInst = upload.render({
+					elem:'#test3'
+					,url:''
+					,done:function (res) {
+						
+					}
+					,error:function(){
+
+					}
+				});
+			});
+			layui.use('upload',function(){
+				var upload = layui.upload;
+				var uploadInst = upload.render({
+					elem:'#test4'
+					,url:''
+					,done:function (res) {
+						
+					}
+					,error:function(){
+
+					}
+				});
+			});
+
+			//导航栏
+			layui.use('element', function(){
+  				var element = layui.element;
+  				element.on('nav(demo)', function(elem){
+    			layer.msg(elem.text());
+ 				 });
+			});
+			//表单验证
+			layui.use(['form', 'layedit', 'laydate'], function(){
+			var form = layui.form
+			,layer = layui.layer
+  			,layedit = layui.layedit
+ 			,laydate = layui.laydate;
+
+            form.verify({
+                title: function(value){
+                    if(value.length < 1){
+                        return '名称至少得1个字符啊';
+                    }
+                }, fname: function(value){
+                    if(value.length < 2){
+                        return '请输入至少2位的用户名';
+                    }
+				},usrname:function(value){
+					if(value.length < 2){
+                        return '请输入至少2位的用户名';
+                    }
+				},id : function(value){
+                    if(value.length < 2){
+                        return '内容请输入至少2个字符';
+                    }
+                },number:function(value){
+					if(value.length < 18){
+						return '身份证号码应为18位';
+					}
+				}
+                ,phone: [/^1[3|4|5|7|8]\d{9}$/, '手机必须11位，只能是数字！']
+            });
+		});
+
+        //监听提交
+ 		form.on('submit(go)', function(data){
+  		layer.alert(JSON.stringify(data.field), {
+  			 title: '最终的提交信息'
+  		})
+  		return false;
+		 });
+		 
+		</script>
+	</body>
+</html>
